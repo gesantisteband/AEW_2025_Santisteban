@@ -1,0 +1,62 @@
+/* Estilos para registro */
+ .registrarse {
+    flex-direction: column;
+    text-align: center;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 18px;
+    color: #7F7F7F;
+}
+
+.campo input {
+    padding: 10px 100px 10px 10px;
+    font-family:'Lucida Sans';
+    border-color: gray;
+    border-style:none;
+}
+
+#sexo {
+    padding: 10px 80px 10px 10px;
+    font-family:'Lucida Sans';
+}
+
+.sign-up-button {
+    margin-top: 30px;
+}
+
+.sign-up-button button {
+    font-family: Arial;
+    padding: 15px 40px 15px 40px;
+    text-align: center;
+    border-color: #000957;
+    background-color: #F6F5F2;
+    border-style: double;
+    color: #000957;
+    font-weight: bold ;
+    cursor: pointer;
+}
+    
+/* Para las imágenes de registro */
+
+main {
+    display:flex;
+    flex-direction: row;
+    max-width: 1800px;
+}
+
+.imagen-concierto {
+    display:flex;
+    justify-content: space-around;
+}
+
+.imagen-concierto img {
+    max-width: 100%;
+} 
+
+#registro {
+    margin: 0px 100px 0px 100px;
+    padding: 30px 0px 0px 0px;
+
+}
+
+    

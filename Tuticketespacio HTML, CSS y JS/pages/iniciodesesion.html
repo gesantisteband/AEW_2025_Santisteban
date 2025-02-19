@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/iniciodesesionestilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="../index.html"><img src="../images/logo.png" alt="logo" width="75%"></a> <!--Alt es el texto que se mostrará en lugar de la imagen en caso de que se produzca un error en la carga de la misma.-->
+        </div>
+    </header>
+
+    <main>
+        <div class="fondo-derecho">
+            <img class="imagen-concierto" src="../images/concierto_3.avif">
+        </div>
+        <form action="" method="POST"  id="formulario">
+            <div class="logearse">
+                <div class="email-password">
+                    <p>Email</p>
+                    <input class="field-correoeletronico" id="email" type="text" placeholder="Ingresa tu correo electrónico" name="email">
+                </div>
+                <div class="email-password">
+                    <p>Contraseña</p>
+                    <input class="field-contraseña" type="password" id="password" placeholder="Ingresa tu contraseña" name="password">
+                </div>
+                <div class="login-button">
+                    <button class="iniciar-sesion" type="submit">Iniciar Sesión</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <a href="#">Acerca de Nosotros</a>
+            <a href="#">Centro de Ayuda</a>
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Libro de Reclamaciones</a>
+        </div>
+        <div class="redes-sociales">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+        </div>
+
+        <div>
+            <a href="index.html"><img src="../images/logo.png" alt="logo" width="80%"></a>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="../js/iniciar-sesion.js"></script>

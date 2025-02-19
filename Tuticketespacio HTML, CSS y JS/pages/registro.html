@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/registroestilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="../index.html"><img src="../images/logo.png" alt="logo" width="75%"></a>
+            <!--Alt es el texto que se mostrará en lugar de la imagen en caso de que se produzca un error en la carga de la misma.-->
+        </div>
+    </header>
+
+    <main>
+        <div class="imagen-concierto">
+            <img src="../images/concierto_2.avif">
+        </div>
+        <form action="" method="POST" id="registro">
+            <div class="registrarse">
+                <div class="campo">
+                    <p>Ingrese su nombre o nombres</p>
+                    <input type="text" id="nombre" placeholder="Escriba su nombre">
+                </div>
+
+                <div class="campo">
+                    <p>Ingrese sus apellidos</p>
+                    <input type="text" id="apellidos" placeholder="Escriba sus apellidos">
+                </div>
+
+                <div class="campo">
+                    <p>Email</p>
+                    <input type="email" id="email" placeholder="example@dominio.com">
+                </div>
+
+                <div class="campo">
+                    <p>Crea tu contraseña</p>
+                    <input type="password" id="contraseña" placeholder="Crea una contraseña">
+                </div>
+
+                <div class="campo">
+                    <p>Número de teléfono</p>
+                    <input type="tel" id="telefono" placeholder="Teléfono">
+                </div>
+
+                <div class="campo">
+                    <p>Ingresa tu sexo</p>
+                    <select id="sexo" class="elegir-sexo">
+                        <option value="" disabled selected>Selecciona tu sexo</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+                </div>
+
+                <div class="sign-up-button">
+                    <button id='boton-registrarse' type="submit">REGISTRARSE</button>
+                </div>
+            </div>
+        </form>
+        <div class="imagen-concierto">
+            <img src="../images/concierto_2.avif">
+        </div>
+    </main>
+    <footer>
+        <div>
+            <a href="#">Acerca de Nosotros</a>
+            <a href="#">Centro de Ayuda</a>
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Libro de Reclamaciones</a>
+        </div>
+        <div class="redes-sociales">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+        </div>
+
+        <div>
+            <a href="index.html"><img src="../images/logo.png" alt="logo" width="80%"></a>
+        </div>
+    </footer>
+
+</body>
+<script src="../js/registro.js"></script>
+
+</html>

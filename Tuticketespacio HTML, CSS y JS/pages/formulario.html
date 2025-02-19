@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Compra</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilosform.css">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="../index.html"><img src="../images/logo.png" alt="logo" width="75%"></a> 
+        </div>
+    </header>
+    
+    
+    <form id="formulario-compra">
+        <h1>Formulario de Compra</h1>
+        <br>
+        <label class="texto">Nombre:</label>
+        <input class="controles" type="text" id="nombre" name="nombre" placeholder="ingrese su nombre">
+        <br>
+        <br>
+        <label class="texto">Correo:</label>
+        <input class="controles" type="text" id="correo" name="correo" placeholder="ingrese correo electrónico">
+        <br>
+        <br>
+        <label class="texto">Evento:</label> 
+        
+        <select id="evento" class="controles">
+            <option value="" disabled selected>Seleccione su evento</option>
+            <option value="Andrés Calamaro">Andrés Calamaro</option>
+            <option value="Kany García">Kany García</option>
+            <option value="Los Hombres G">Los Hombres G</option>
+            <option value="Haashville">Haashville</option>
+            <option value="Shawn Mendes">Shawn Mendes</option>
+            <option value="Tony Sucar">Tony Sucar</option>
+            <option value="Hamlet">Hamlet</option>
+            <option value="La Cena">La Cena</option>
+            <option value="La Herencia">La Herencia</option>
+            <option value="El Barbero de Sevilla">El Barbero de Sevilla</option>
+            <option value="El Origen">El Origen</option>
+            <option value="El Hombre Sin Memoria">El Hombre Sin Memoria</option>
+            <option value="Los Jotitas El Reencuentro">Los Jotitas El Reencuentro</option>
+            <option value="Liga Nacional de Voley Femenino">Liga Nacional de Voley Femenino</option>
+            <option value="Galindo Vs Azevedo MMA EN FFC">Galindo Vs Azevedo MMA EN FFC</option>
+            <option value="Torneo Máster de Voleibol">Torneo Máster de Voleibol</option>
+            <option value="The Color Run">The Color Run</option>
+            <option value="conviertete en Sport Player 2025">conviertete en Sport Player 2025</option>
+        </select>
+        <br>
+        <br>
+        <label class="texto">Contraseña:</label>
+        <input class="controles" type="password" id="contrasena" name="contrasena" placeholder="ingrese su contraseña">
+        <br>
+        <br>
+        <input class="boton" type="submit" value="Registrar">
+    </form>
+    <div id="mensajeserror"></div>
+    <footer>
+        <div>
+            <a href="#">Acerca de Nosotros</a>
+            <a href="#">Centro de Ayuda</a>
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Libro de Reclamaciones</a>
+        </div>
+        <div class="redes-sociales">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+        </div>
+
+        <div>
+            <a href="index.html"><img src="../images/logo.png" alt="logo" width="80%"></a>
+        </div>
+    </footer>
+</body>
+<script src="../js/app.js"></script>
+</html>

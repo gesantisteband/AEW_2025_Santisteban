@@ -1,0 +1,390 @@
+/*ESTILOS PARA TODO EL BODY*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /*Fuente de letra para todo el body*/
+    background: rgb(245, 243, 243); /*Fondo de color medio blanco para todo el body*/
+    padding-top: 100px; /*Para asegurar que el body se vea siempre más abajo que la cabecera*/
+}
+
+
+
+/*HEADER*/
+
+header {
+    display: flex; /*Activa el modelo flexbox para el header*/
+    justify-content: space-between; /*Distribuye los elementos con espacio entre ellos*/
+    align-items: center; /*Centra verticalmente los elementos*/
+    background: linear-gradient(to right, #072cff, #2c3e50); /*Efecto degradado del color azul al casi negro*/
+    position: fixed; /* Mantiene el header fijo en la parte superior*/
+    top: 0; /*Ocupa todo el ancho de la pantalla*/
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000; /*Asegura que el header esté por encima de otros elementos*/
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /*Añade una sombra sutil*/
+}
+
+nav {
+    max-width: 900px; /*Limita el ancho máximo de la navegación*/
+    margin: auto; /*Centra la navegación horizontalmente*/
+    font-size: 20px; /*Tamaño de fuente para los enlaces*/
+    margin-top: 20px; /*Espacio superior*/
+}
+
+.menu-horizontal { 
+    display: flex; /*Organiza los elementos del menú horizontalmente*/
+    list-style: none; /*Elimina los puntos de la lista*/
+    justify-content: space-around; /*Distribuye los elementos uniformemente*/
+}
+
+.menu-horizontal > li > a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 15px 20px;
+}
+
+
+/*Efecto para marcar amarrillo*/
+
+header a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #f1c40f;
+    transition: width 0.3s ease;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+header a:hover {
+    color: #f1c40f;
+}
+
+.menu-horizontal li:hover .submenu-categorias {
+    display: block;
+}
+
+.submenu-categorias {
+    background-color: #0621bd;
+    width: 200px;
+    list-style: none;
+    position: absolute;
+    display: none;
+    z-index: 1
+}
+
+.submenu-categorias > li > a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: block
+}
+
+.submenu-categorias > li:hover {
+    background-color: rgb(255, 255, 88);
+}
+
+.barra-busqueda {
+    margin: 0 10px;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 20px;
+    width: 250px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.botones-autenticadores {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.link-autenticarse {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.link-autenticarse:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.icono-autenticarse {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.link-autenticarse span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+
+
+/*MAIN*/
+
+/* Estilos generales del main */
+main {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/*CARRUSEL*/
+
+/*Para el Carrusel de imágenes principal*/
+.carrusel {
+    width: 100%;
+    max-width: 1500px; /*Ancho máximo del carrusel*/
+    margin: 0 auto 3rem auto;
+    overflow: hidden; /*Oculta el contenido que se sale*/
+    border-radius: 15px; /*Bordes redondeados*/
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.carrusel-interior {
+    display: flex; /*Organiza los elementos del carrusel horizontalmente*/
+    width: 600%; /* 100% × 6 imágenes. Ancho total para 6 imágenes */
+    animation: carousel 10s infinite; /*Animación automática. Tiempo por imagen que se puede ir graduando */
+}
+
+.carrusel-item {
+    width: 16.666%; /* 100% ÷ 6 imágenes */
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Animación ajustada para 6 imágenes. Esta regla es ajustable para la cantidad de imágenes que se quiera usar en el carrusel. 100/la cantidad de imágenes usadas. Para que cada imagen se muestre durante aproximadamente el mismo tiempo*/
+
+@keyframes carousel { /*La regla @keyframes carousel define una secuencia de animación llamada "carousel" que controla cómo se mueven las imágenes*/
+    0%, 16% { /*La primera imagen se mantiene en su posición original (0) durante el 16% del tiempo total*/
+        transform: translateX(0);
+    }
+    20%, 36% { /*Hay un pequeño salto del 16% al 20% para hacer la transición*/
+        transform: translateX(-16.666%); /*Mueve el contenedor hacia la izquierda un 16.666% (1/6 del ancho total). Representa el ancho de la imagen*/
+    }
+    40%, 56% {
+        transform: translateX(-33.332%); /*Mueve el contenedor dos posiciones hacia la izquierda (2/6 del ancho)*/
+    }
+    60%, 76% {
+        transform: translateX(-49.998%); /*Mueve el contenedor tres posiciones (3/6 del ancho)*/
+    }
+    80%, 96% {
+        transform: translateX(-66.664%); /*Mueve el contenedor cuatro posiciones (4/6 del ancho)*/
+    }
+    100% {
+        transform: translateX(-83.33%); /*Completa el movimiento a la última imagen (5/6 del ancho)*/
+    }
+}
+
+/* Pausa la animación cuando el usuario hace hover. O sea, cuando pone el cursor sobre el carrusel, la animación se pausa. Al quitar el cursor la animación continúa.*/
+.carrusel-interior:hover {
+    animation-play-state: paused;
+}
+
+
+
+
+
+
+/* Categorías de eventos */
+.categoria {
+    margin-bottom: 4rem;
+}
+
+.categoria h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #072cff; /*Color que hace juego con el diseño de la página*/
+    display: inline-block;
+}
+
+/* Contenedor de eventos */
+.eventos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Tarjetas de eventos individuales */
+.evento {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.evento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.evento img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botón "Ver más" */
+.categoria a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(to right, #072cff, #2c3e50); /*Efecto difuminado del color*/
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.categoria a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: linear-gradient(to right, #072cff, #2c3e50); /*Efecto difuminado del color*/
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .eventos {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    .categoria h2 {
+        font-size: 1.5rem;
+    }
+
+    .event-highlight {
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*PARTE DEL FOOTER*/
+
+
+/* Estilos generales del footer */
+footer {
+    background: linear-gradient(to right, #072cff, #2c3e50); /*Efecto difuminado del color*/
+    color: white;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Enlaces principales */
+footer > div:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de subrayado al hover */
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #f1c40f;
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+footer a:hover {
+    color: #f1c40f;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Diseño Responsive */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    footer > div:first-child {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .redes-sociales {
+        margin-top: 1.5rem;
+    }
+}
+

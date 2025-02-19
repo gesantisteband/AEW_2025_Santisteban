@@ -1,0 +1,60 @@
+
+#formulario-compra{
+    width: 600px;
+    background:white;
+    padding: 30px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    box-shadow: 7px 13px 37px black;
+    
+}
+
+#formulario-compra h1{
+    font-size: 45px;
+    margin-bottom: 10px;
+    
+}
+.texto{
+    font-size: 20px;
+}
+
+.controles{
+    width: 100%;
+    background: bisque;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    border: 1px solid blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+.boton{
+    width: 50%;
+    background: blue;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 20px; 
+}
+
+#mensajeserror{
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 15px;
+    color: red;
+}
+
+#formulario-compra a{
+    text-align: center;
+}
+body{
+    background: url(../images/concierto_3.avif) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}

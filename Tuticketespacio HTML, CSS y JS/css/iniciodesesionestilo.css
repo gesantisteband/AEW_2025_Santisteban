@@ -1,0 +1,64 @@
+/* Estilos para inicio se sesion */
+.logearse {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 25px;
+    color: #7F7F7F;
+}
+
+.email-password p{
+    margin: 40px 0px 40px 0px;
+}
+
+.email-password input {
+    padding: 20px 10px 20px 10px;
+    font-family: 'Lucida Sans';
+    border-color: gray;
+    border-style: none;
+    width: 300px;
+}
+
+.login-button {
+    margin-top: 60px;
+}
+
+.login-button button {
+    font-family: Arial;
+    padding: 15px 40px 15px 40px;
+    text-align: center;
+    border-color: #000957;
+    background-color: #F6F5F2;
+    border-style: double;
+    color: #000957;
+    font-weight: bold ;
+}
+
+/* Para la imagen de inicio de sesión */
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.fondo-derecho {
+    width: 60%;
+    height: 50%;
+}
+
+#formulario {
+    padding: 20px;
+    width: 40%;
+    border-color: #090c1b;
+    border-width: 10px;
+    margin-left: 20px;
+    border-style: outset;
+    border-radius: 20px;
+}
+
+.fondo-derecho img {
+    width: 100%;
+    height: 100%;
+}
